@@ -19,13 +19,10 @@ from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from langchain.tools import Tool
 from langchain_core.messages import AIMessage, HumanMessage
 
-# PERUBAHAN: Mengaktifkan Verbose Log secara global agar alur berpikir rantai LCEL muncul di terminal
-from langchain.globals import set_verbose
-set_verbose(True)
 
-# ==============================================================================
+
+
 # FUNGSI SETUP UTAMA DENGAN CACHING
-# ==============================================================================
 @st.cache_resource
 def setup_agent():
     print("======================================================================")
